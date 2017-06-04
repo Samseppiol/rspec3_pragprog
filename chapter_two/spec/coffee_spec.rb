@@ -25,5 +25,5 @@ class Coffee
 
   def price
     1.00
-  end 
+  end
 end
