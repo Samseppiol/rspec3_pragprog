@@ -24,3 +24,6 @@ https://pragprog.com/book/rspec3/effective-testing-with-rspec-3
 > Helper methods are regular Ruby methods; you control when these run
 
 > RSpec’s let construct initializes data on demand
+
+## More Notes:
+> Context is just an alias for describe. Use context for phrases that modify the object we’re testing.
