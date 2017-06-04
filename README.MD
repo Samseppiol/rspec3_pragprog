@@ -13,9 +13,14 @@ https://pragprog.com/book/rspec3/effective-testing-with-rspec-3
 
 ##### Three Rspec Methods:
 > Rspec.describe creates an example group (set of related tests)
+
 > it creates an example (individual test)
+
 > Expect verifies an expected outcome (assertion)
 
+##### Reducing Duplication
 > RSpec hooks run automatically at specific times during testing
+
 > Helper methods are regular Ruby methods; you control when these run
+
 > RSpec’s let construct initializes data on demand
