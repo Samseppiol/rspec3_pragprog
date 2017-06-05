@@ -1,3 +1,7 @@
+RSpec.configure do |config|
+  config.example_status_persistence_file_path = 'spec/examples.txt'
+end
+
 RSpec.describe 'A cup of coffee' do
   let(:coffee) {Coffee.new}
 
@@ -24,6 +28,6 @@ class Coffee
   end
 
   def price
-    1.00
+    1.00 + ingredients.size * 0.25
   end
 end

@@ -34,9 +34,23 @@ https://pragprog.com/book/rspec3/effective-testing-with-rspec-3
 ##### Identifying slow tests
 > run rspec --profile and then the number of slowest tests you want to identify. E.g
 
->
-Top 2 slowest examples (1.01 seconds, 61.7% of total time):<br>
+> Top 2 slowest examples (1.01 seconds, 61.7% of total time):<br>
   The ruby sleep method can sleep for 0.5 second<br>
     0.60543 seconds ./slow_spec.rb:6<br>
   The ruby sleep method can sleep for 0.4 second<br>
     0.40194 seconds ./slow_spec.rb:5
+
+##### Narrowing down tests:
+> rspec spec/unit # Load *_spec.rb in this dir and subdirs<br>
+> rspec spec/unit/specific_spec.rb # Load just one spec file<br>
+> rspec spec/unit spec/smoke # Load more than one directory<br>
+> rspec spec/unit spec/foo_spec.rb # Or mix and match files and directories<br>
+
+##### Only Failures
+
+> To run only failures use the command rspec --only-failures
+
+> However configuration must be setup before hand:
+
+>RSpec.configure do |config|<br> config.example_status_persistence_file_path = 'spec/examples.txt'<br>
+end
