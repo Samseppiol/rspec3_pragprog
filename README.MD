@@ -67,3 +67,9 @@ Save time by marking them as focused. Simply add an 'f' to the beginning of the 
 > Must also add this to the configuration.
 
 > config.filter_run_when_matching(focus: true)
+
+##### Starting with a description
+> To avoid trying to do to many features at once you can simply just write down the description of a test and no output. When running rspec it will simply say there are pending tests.
+
+##### Pending tests
+> Same as description if you want to write down what the test should do you can simply write pending before hand.
