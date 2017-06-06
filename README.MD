@@ -52,13 +52,13 @@ https://pragprog.com/book/rspec3/effective-testing-with-rspec-3
 
 > However configuration must be setup before hand:
 
->RSpec.configure do |config|<br> config.example_status_persistence_file_path = 'spec/examples.txt'<br>
+> RSpec.configure do |config|<br> config.example_status_persistence_file_path = 'spec/examples.txt'<br>
 end
 
 
 ##### Focusing Specific Examples
 Save time by marking them as focused. Simply add an 'f' to the beginning of the Rspec method name:
-> contect becomes fcontext
+> context becomes fcontext
 
 > it becomes fit
 
