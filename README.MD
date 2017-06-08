@@ -73,3 +73,18 @@ Save time by marking them as focused. Simply add an 'f' to the beginning of the 
 
 ##### Pending tests
 > Same as description if you want to write down what the test should do you can simply write pending before hand.
+
+
+> Acceptance: Does the whole system work?
+> Unit: Do our objects do the right thing, are they convenient to work with?
+> Integration: Does our code work against code we can’t change?
+
+##### Acceptance tests
+> Acceptance specs describe a feature in an end-to-end, black-box style that exercises the entire system. Hard to write, brittle and slow but supremely useful for large scale refactoring.
+
+##### Unit Specs
+> unit specs focus on individual units, often as small as a object or method.  They check the behaviour of a piece of code relative to the environment you construct for it.
+
+
+##### Integration Tests
+> Integration specs sit somewhere between these two extremes. Code that interacts with an external service—such as a database or third-party REST API—should have an integration spec.
