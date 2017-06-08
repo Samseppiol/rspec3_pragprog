@@ -3,5 +3,9 @@ require 'json'
 
 module ExpenseTracker
   class API < Sinatra::Base
-  end 
+    post '/expenses' do
+
+    end
+  end
+
 end
