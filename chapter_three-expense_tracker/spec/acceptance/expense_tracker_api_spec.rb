@@ -18,6 +18,7 @@ module ExpenseTracker
 
     end
 
+
     it 'records submitted expenses' do
       coffee = post_expense(
         'payee' => 'Starbucks',
@@ -36,19 +37,20 @@ module ExpenseTracker
       'amount' => 95.20,
       'date' => '2017-06-11'
       )
-      # post '/expenses', JSON.generate(coffee)
-      # expect(last_response.status).to eq(200)
-      # parsed = JSON.parse(last_response.body)
-      # expect(parsed).to include('expense_id' => a_kind_of(Integer))
-    end
-    
-    it 'records submitted responses' do
+
       get '/expenses/2017-06-10'
       expect(last_response.status).to eq(200)
 
       expenses = JSON.parse(last_response.body)
       expect(expenses).to contain_exactly(coffee, zoo)
+      # post '/expenses', JSON.generate(coffee)
+      # expect(last_response.status).to eq(200)
+      # parsed = JSON.parse(last_response.body)
+      # expect(parsed).to include('expense_id' => a_kind_of(Integer))
+
     end
+
+
   end
 end
 
