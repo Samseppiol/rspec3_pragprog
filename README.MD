@@ -88,3 +88,7 @@ Save time by marking them as focused. Simply add an 'f' to the beginning of the 
 
 ##### Integration Tests
 > Integration specs sit somewhere between these two extremes. Code that interacts with an external service—such as a database or third-party REST API—should have an integration spec.
+
+
+#### Test Doubles 
+> A test double is an object that stands in for another one during a test. often refrred to as mocks, stubs, fakes or spies, depending how they are used. Under RSpec terms they are simply reffered to as doubles.
