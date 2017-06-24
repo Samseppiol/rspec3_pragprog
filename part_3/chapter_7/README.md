@@ -22,3 +22,33 @@
 > The it method has helpful aliases as well. Most of the time you are describing the subject of a sentence, in this instance, it makes sense to use. 
 
 > However when providing several data examples rather than several sentences, it doesnt make much sense, instead 'example' can be used.
+
+#### Specify instead of It
+> Sometimes neither it or example reads well. RSpec provides the specify alias. 
+
+
+# Sharing Common Logic 
+> Three organisation tools are let definitions, hooks and helper methods.
+
+## Hooks 
+> For situations where a let block won't cut it. 
+> Three kinds of hooks in RSpec, named after what they run.
+> Before 
+> After 
+> Around
+
+> Before and after hooks are related.
+### Before and after
+> After hooks are guaranteed to run after your examples, even if the example fails or the before hook raises an exception. Intended to clean up after your setup and logic specs.
+
+> Around hooks sandwich spec code inside your hook, so part of the hook runs before the example and part runs after.
+
+### Config Hooks 
+> Before, after and around hooks go inside example groups. If you only need hooks to run for one set of examples then this is fine. But if hooks are needed to run for multiple groups, copying and pasting code is tiring and dry.
+
+> In this situation you can define hooks for your entire suite once as a configure block, typically put in spec/spec_helper.rb
+
+> However they run for every example in your test suite. Trade offs are:
+> Global hooks reduce duplication but can lead to surprising 'action at a distance' effect in your specs. 
+> Hooks inside example groups are easier to follow, but it's easy to leave out an important hook by mistake when creating a new file.
+
